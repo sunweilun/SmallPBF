@@ -1,3 +1,3 @@
 # SmallPBF
 
-Small position-based fluids implementation without vorticity and viscosity.
+Simple position-based fluids implementation without vorticity and viscosity.
