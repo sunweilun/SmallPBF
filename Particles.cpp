@@ -112,12 +112,12 @@ void Particles::step()
     
     for(int iter = 0; iter < 10; iter ++)
     {
-        #pragma omp parallel for
+        #pragma omp parallel for schedule(dynamic, 128)
         for(int i=0; i<lamb.size(); i++)
         {
             lamb[i] = lambda(i);
         }
-        #pragma omp parallel for
+        #pragma omp parallel for schedule(dynamic, 128)
         for(int i=0; i<particles.size(); i++)
         {
             glm::dvec3 delta_p(0);
